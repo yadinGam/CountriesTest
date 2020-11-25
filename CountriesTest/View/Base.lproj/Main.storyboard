@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FB2-bS-t4b">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Countries View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CountriesViewController" customModule="CountriesTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lRF-aS-hET">
+                                <rect key="frame" x="0.0" y="88" width="414" height="744"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-Gr-VAh">
+                                <rect key="frame" x="0.0" y="832" width="414" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4e-Iq-tOo">
+                                        <rect key="frame" x="0.0" y="0.0" width="203" height="30"/>
+                                        <state key="normal" title="Sort by name"/>
+                                        <connections>
+                                            <action selector="sortByNameTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lMV-sg-Iom"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEM-Ux-lKN">
+                                        <rect key="frame" x="211" y="0.0" width="203" height="30"/>
+                                        <state key="normal" title="Sort by area"/>
+                                        <connections>
+                                            <action selector="sortByAreaTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6jI-E6-aUS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lRF-aS-hET" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AKM-jr-gGz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CZg-Gr-VAh" secondAttribute="bottom" id="Mh5-Wl-Zh4"/>
+                            <constraint firstItem="CZg-Gr-VAh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VO6-sU-gMt"/>
+                            <constraint firstItem="lRF-aS-hET" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VeQ-Bt-6xL"/>
+                            <constraint firstItem="lRF-aS-hET" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cTu-xi-zA5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CZg-Gr-VAh" secondAttribute="trailing" id="wXf-XV-PrT"/>
+                            <constraint firstItem="CZg-Gr-VAh" firstAttribute="top" secondItem="lRF-aS-hET" secondAttribute="bottom" id="xis-s6-SWu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xoO-pM-Icf"/>
+                    <connections>
+                        <outlet property="countriesTableView" destination="lRF-aS-hET" id="YsK-ej-loK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="584.05797101449275" y="-59.598214285714285"/>
+        </scene>
+        <!--Neighbor Countries View Controller-->
+        <scene sceneID="KS4-bc-uIz">
+            <objects>
+                <viewController storyboardIdentifier="NeighborCountriesViewController" id="TiT-qe-nQK" customClass="NeighborCountriesViewController" customModule="CountriesTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gD5-T7-PgE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z9L-a4-oTt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HPY-mP-5oh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z9L-a4-oTt" firstAttribute="top" secondItem="HPY-mP-5oh" secondAttribute="top" id="Gmw-iZ-msN"/>
+                            <constraint firstItem="Z9L-a4-oTt" firstAttribute="leading" secondItem="HPY-mP-5oh" secondAttribute="leading" id="Z9n-8d-w5b"/>
+                            <constraint firstItem="HPY-mP-5oh" firstAttribute="bottom" secondItem="Z9L-a4-oTt" secondAttribute="bottom" id="eCt-pt-hwB"/>
+                            <constraint firstItem="HPY-mP-5oh" firstAttribute="trailing" secondItem="Z9L-a4-oTt" secondAttribute="trailing" id="m8s-pD-6TJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="neighborCountriesTableView" destination="Z9L-a4-oTt" id="ZNb-fy-s8n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mxb-cF-xdC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1386.9565217391305" y="-60.267857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ngs-LL-qhf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FB2-bS-t4b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0pX-o7-aiD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="L3A-6o-7UK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdp-61-nXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326.08695652173918" y="-59.598214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
