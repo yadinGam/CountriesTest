@@ -25,7 +25,7 @@ class CountriesViewController: UIViewController , Alertable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.countriesViewModel = CountriesViewModel(service: CountriesService())
+        self.countriesViewModel = CountriesViewModel()
         
         self.countriesTableView.delegate = self
         self.countriesTableView.dataSource = self
@@ -50,10 +50,10 @@ class CountriesViewController: UIViewController , Alertable {
     }
 
     //MARK:- Navigation
-    private func showSelectedCountryNeighbors( neighborCountries: [CountryViewModel]) {
+    private func showSelectedCountryNeighbors(model: CountriesViewModel) {
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 let vc = sb.instantiateViewController(identifier: "NeighborCountriesViewController") as! NeighborCountriesViewController
-                vc.countriesViewModel = CountriesViewModel(countryViewModels: neighborCountries, service: CountriesService())
+                vc.countriesViewModel = model
                 vc.modalPresentationStyle = .fullScreen
                 self.show(vc, sender: self)
     }
@@ -80,7 +80,8 @@ extension CountriesViewController : UITableViewDelegate {
             return
         }
         
-        self.showSelectedCountryNeighbors(neighborCountries: neighborCountries)
+        let model = CountriesViewModel(countries: neighborCountries)
+        self.showSelectedCountryNeighbors(model: model)
     }
 }
 
