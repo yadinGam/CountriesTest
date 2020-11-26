@@ -23,6 +23,7 @@
 		CC9B24CA256D955300EA8C98 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B24C9256D955300EA8C98 /* CountryViewModel.swift */; };
 		CC9B24CE256DC6F900EA8C98 /* NeighborCountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B24CD256DC6F900EA8C98 /* NeighborCountriesViewController.swift */; };
 		CC9B24D2256DD37800EA8C98 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B24D1256DD37800EA8C98 /* CountriesViewModel.swift */; };
+		CCE0FC51256F334B00EC2442 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE0FC50256F334B00EC2442 /* CountriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		CC9B24C9256D955300EA8C98 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		CC9B24CD256DC6F900EA8C98 /* NeighborCountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeighborCountriesViewController.swift; sourceTree = "<group>"; };
 		CC9B24D1256DD37800EA8C98 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
+		CCE0FC50256F334B00EC2442 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 		DC06B80E1D1983398FA7DC0D /* Pods-CountriesTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountriesTest.release.xcconfig"; path = "Target Support Files/Pods-CountriesTest/Pods-CountriesTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 			children = (
 				CC9B24C9256D955300EA8C98 /* CountryViewModel.swift */,
 				CC9B24D1256DD37800EA8C98 /* CountriesViewModel.swift */,
+				CCE0FC50256F334B00EC2442 /* CountriesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				CC9B249A256D5C1100EA8C98 /* CountriesViewController.swift in Sources */,
 				CC9B2496256D5C1100EA8C98 /* AppDelegate.swift in Sources */,
 				CC9B24A0256D5C1100EA8C98 /* CountriesTest.xcdatamodeld in Sources */,
+				CCE0FC51256F334B00EC2442 /* CountriesViewModel.swift in Sources */,
 				CC9B24CA256D955300EA8C98 /* CountryViewModel.swift in Sources */,
 				CC9B24D2256DD37800EA8C98 /* CountriesViewModel.swift in Sources */,
 				CC9B24B4256D5D5D00EA8C98 /* Country.swift in Sources */,
